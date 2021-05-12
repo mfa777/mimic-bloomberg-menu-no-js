@@ -14,7 +14,7 @@
     position: relative;
     display: block;
     overflow: hidden;
-    padding: 1.25rem;
+    padding: 1.25rem 0 1.25rem 1.25rem;
     max-width: -moz-fit-content;
     max-width: fit-content;
     box-sizing: border-box;
@@ -48,16 +48,16 @@
     border-left: 1px solid white;
     border-color: inherit;
     position: absolute;
-    left: 1.25rem;
     top: calc(0.5*1rem);
     box-sizing: border-box;
   }
   nav.bmenu a {
     position: relative;
-    display: block; 
+    display: block;
     height: 2em;
     line-height: 2em;
     min-width: 160px;
+    padding-right: 1.25rem;
   }
   nav.bmenu > hr {
     border: 0;
@@ -70,8 +70,7 @@
   nav.bmenu article.panel {
     display: none;
     position: relative;
-    min-height: calc(463px - 2*1.25rem); 
-    padding-left: 1.25rem;
+    min-height: calc(463px - 2*1.25rem);
   }
   nav.bmenu article.panel section.titled-group {
     min-width: 160px;
@@ -101,53 +100,45 @@
   article.panel {
     display: none;
   }
-
-  nav.bmenu > a:not(:hover):not(:focus) ~ article.panel:nth-of-type(1),
-  nav.bmenu > a.no-panel:hover ~ article.panel:nth-of-type(1) {
+  nav.bmenu article.panel:hover {
     display: flex;
-  }
-  nav.bmenu > a:focus:not(:nth-of-type(1)):not(.no-panel) ~ article.panel:nth-of-type(1) {
-    display: none;
-  }
-  nav.bmenu > a:hover:not(:nth-of-type(1)):not(.no-panel) ~ article.panel:nth-of-type(1) {
-    display: none;
   }
 
   nav.bmenu > a:nth-of-type(1):focus ~ article.panel:nth-of-type(1),
   nav.bmenu > a:nth-of-type(1):hover ~ article.panel:nth-of-type(1) {
-    display: flex; 
+    display: flex;
   }
   nav.bmenu > a:nth-of-type(2):focus ~ article.panel:nth-of-type(2),
   nav.bmenu > a:nth-of-type(2):hover ~ article.panel:nth-of-type(2) {
-    display: flex; 
+    display: flex;
   }
   nav.bmenu > a:nth-of-type(3):focus ~ article.panel:nth-of-type(3),
   nav.bmenu > a:nth-of-type(3):hover ~ article.panel:nth-of-type(3) {
-    display: flex; 
+    display: flex;
   }
   nav.bmenu > a:nth-of-type(4):focus ~ article.panel:nth-of-type(4),
   nav.bmenu > a:nth-of-type(4):hover ~ article.panel:nth-of-type(4) {
-    display: flex; 
+    display: flex;
   }
   nav.bmenu > a:nth-of-type(5):focus ~ article.panel:nth-of-type(5),
   nav.bmenu > a:nth-of-type(5):hover ~ article.panel:nth-of-type(5) {
-    display: flex; 
+    display: flex;
   }
   nav.bmenu > a:nth-of-type(6):focus ~ article.panel:nth-of-type(6),
   nav.bmenu > a:nth-of-type(6):hover ~ article.panel:nth-of-type(6) {
-    display: flex; 
+    display: flex;
   }
   nav.bmenu > a:nth-of-type(7):focus ~ article.panel:nth-of-type(7),
   nav.bmenu > a:nth-of-type(7):hover ~ article.panel:nth-of-type(7) {
-    display: flex; 
+    display: flex;
   }
   nav.bmenu > a:nth-of-type(8):focus ~ article.panel:nth-of-type(8),
   nav.bmenu > a:nth-of-type(8):hover ~ article.panel:nth-of-type(8) {
-    display: flex; 
+    display: flex;
   }
   nav.bmenu > a:nth-of-type(9):focus ~ article.panel:nth-of-type(9),
   nav.bmenu > a:nth-of-type(9):hover ~ article.panel:nth-of-type(9) {
-    display: flex; 
+    display: flex;
   }
 
   nav.bmenu > a:hover:not(.no-panel) ~ a:focus:nth-of-type(1) ~ article.panel:nth-of-type(1),
@@ -190,7 +181,7 @@
   nav.bmenu > a:nth-of-type(1):hover ~ a:focus ~ article.panel:nth-of-type(1) {
     display: flex;
   }
-  
+
   #bmenu_toggle:not(:checked) ~ div.hide-at-start-wrapper > nav.bmenu > a::after {
     border-color: black;
   }
@@ -236,7 +227,7 @@
     border-left: 0;
     /* centered vertically and pointing right */
     /* just maths, bitches, MATHS */
-    right: calc(0.5*0.5em);
+    right: calc(0.5*0.5em + 1.25em);
     top: calc(50% + 0.5*0.5*0.5em);
     transform: rotate(45deg) translate(-50%, -50%);
   }
